@@ -1,3 +1,6 @@
+mod chapters;
+use self::chapters::variables_and_mutability;
+
 fn main() {
-    println!("Hello, world!");
+    variables_and_mutability::main();
 }
