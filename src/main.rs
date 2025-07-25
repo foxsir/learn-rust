@@ -1,5 +1,6 @@
-mod chapters;
-use self::chapters::variables_and_mutability;
+mod chapter;
+
+use self::chapter::variables_and_mutability;
 
 fn main() {
     variables_and_mutability::main();
