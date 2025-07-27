@@ -13,11 +13,29 @@ fn mutability_of_variables() {
 
 fn constant_value() {
     const CONS: u32 = 60 * 60 * 3;
-    print!("CONS is constant: {CONS}");
+    println!("CONS is constant: {CONS}");
+}
+
+fn shadowing() {
+    println!("\n\nvariables shadowing");
+    let x = 100;
+    const CONS: u32 = 60 * 60 * 3;
+
+    {
+        let x = "partial variable";
+        const CONS: u32 = 60 * 60 * 3;
+        println!("{}", x);
+        println!("x len: {}", x.len());
+        println!("{}", CONS);
+    }
+
+    println!("{}", x);
+    println!("{}", CONS);
 }
 
 pub fn main() {
     variables();
     mutability_of_variables();
     constant_value();
+    shadowing();
 }
