@@ -1,7 +1,12 @@
 mod chapter;
 
 use self::chapter::variables_and_mutability;
+use self::chapter::data_type;
 
 fn main() {
+    println!("Variables and Mutability\n");
     variables_and_mutability::main();
+
+    println!("Data Types\n");
+    data_type::main()
 }
