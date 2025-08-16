@@ -36,5 +36,22 @@ pub fn main() {
     println!("{:?}", tup);
     let tup: (i32, f64, &str) = (500, 6.4, "1");
     println!("{:?}", tup);
+    println!("get tuple member: {}", tup.0);
+
+    println!("\n数组类型");
+    let mut arr = [1, 2, 3, 4, 5];
+    println!("{:?}", arr);
+    arr[0] = 10; // modify the first element
+    println!("{:?}", arr);
+
+    let arr2: [i32; 6] = [1, 2, 3, 4, 5, 6];
+    println!("{:?}", arr2);
+    println!("{:?}", arr2.len());
+
+    println!("\niterate over array");
+    for it in arr2 {
+        println!("{}", it)
+    }
+
 
 }
