@@ -1,6 +1,6 @@
 mod chapter;
 
-use crate::chapter::{control_flow, functions, ownership};
+use crate::chapter::{control_flow, functions, ownership, references_and_borrowing};
 use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
@@ -19,4 +19,7 @@ fn main() {
 
     println!("Ownership\n");
     ownership::main();
+
+    println!("References and Borrowing\n");
+    references_and_borrowing::main();
 }
