@@ -1,5 +1,6 @@
 mod chapter;
 
+use crate::chapter::functions;
 use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
@@ -8,5 +9,8 @@ fn main() {
     variables_and_mutability::main();
 
     println!("Data Types\n");
-    data_type::main()
+    data_type::main();
+
+    println!("Data Types\n");
+    functions::main()
 }
