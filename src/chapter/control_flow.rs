@@ -56,7 +56,7 @@ fn for_number_range() {
     println!("LIFTOFF!!!");
 }
 
-fn sleep_secs(seconds: u64) {
+fn _sleep_secs(seconds: u64) {
     println!("waiting for {seconds} seconds...");
     sleep(Duration::from_secs(seconds));
 }
@@ -94,10 +94,10 @@ pub fn main() {
     println!("The result is {result}");
 
     loop_name();
-    sleep_secs(1);
+    // sleep_secs(1);
     while_loop();
-    sleep_secs(1);
+    // sleep_secs(1);
     for_loop();
-    sleep_secs(1);
+    // sleep_secs(1);
     for_number_range();
 }

@@ -1,6 +1,6 @@
 mod chapter;
 
-use crate::chapter::{control_flow, functions};
+use crate::chapter::{control_flow, functions, ownership};
 use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
@@ -16,4 +16,7 @@ fn main() {
 
     println!("Control Flow\n");
     control_flow::main();
+
+    println!("Ownership\n");
+    ownership::main();
 }
