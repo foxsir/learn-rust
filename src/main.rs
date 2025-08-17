@@ -1,6 +1,6 @@
 mod chapter;
 
-use crate::chapter::functions;
+use crate::chapter::{control_flow, functions};
 use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
@@ -12,5 +12,8 @@ fn main() {
     data_type::main();
 
     println!("Data Types\n");
-    functions::main()
+    functions::main();
+
+    println!("Control Flow\n");
+    control_flow::main();
 }
