@@ -1,6 +1,6 @@
 mod chapter;
 
-use crate::chapter::{control_flow, functions, ownership, references_and_borrowing};
+use crate::chapter::{control_flow, functions, ownership, references_and_borrowing, slices};
 use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
@@ -22,4 +22,7 @@ fn main() {
 
     println!("References and Borrowing\n");
     references_and_borrowing::main();
+
+    println!("Slices Type\n");
+    slices::main();
 }
