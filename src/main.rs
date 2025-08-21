@@ -5,24 +5,24 @@ use self::chapter::variables_and_mutability;
 use self::chapter::data_type;
 
 fn main() {
-    println!("Variables and Mutability\n");
+    println!("\nVariables and Mutability\n");
     variables_and_mutability::main();
 
-    println!("Data Types\n");
+    println!("\nData Types\n");
     data_type::main();
 
-    println!("Data Types\n");
+    println!("\nData Types\n");
     functions::main();
 
-    println!("Control Flow\n");
+    println!("\nControl Flow\n");
     control_flow::main();
 
-    println!("Ownership\n");
+    println!("\nOwnership\n");
     ownership::main();
 
-    println!("References and Borrowing\n");
+    println!("\nReferences and Borrowing\n");
     references_and_borrowing::main();
 
-    println!("Slices Type\n");
+    println!("\nSlices Type\n");
     slices::main();
 }

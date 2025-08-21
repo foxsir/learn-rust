@@ -1,24 +1,22 @@
-fn first_word(s: &String) -> usize {
+fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[..i];
         }
     }
 
-    s.len()
+    &s[..s.len()]
 }
 
 pub fn main() {
-    let word = String::from("h e y");
+    let word = String::from("he y");
 
-    let w = first_word(&word);
-    println!("{}", w);
-    println!("{}", word);
+    let w = first_word(&word[0..]);
+    println!("first word: {}", w);
 
     let s = String::from("你好");
     println!("{}", &s[..3]);
-
 
 }
