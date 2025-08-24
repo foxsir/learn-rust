@@ -6,3 +6,4 @@ pub mod ownership;
 pub mod references_and_borrowing;
 pub mod slices;
 pub mod structure;
+pub mod enums_and_pattern;

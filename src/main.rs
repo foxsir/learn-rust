@@ -1,15 +1,6 @@
 mod chapter;
 
-use crate::chapter::{
-    variables_and_mutability,
-    data_type,
-    control_flow,
-    functions,
-    ownership,
-    references_and_borrowing,
-    slices,
-    structure
-};
+use crate::chapter::{variables_and_mutability, data_type, control_flow, functions, ownership, references_and_borrowing, slices, structure, enums_and_pattern};
 
 fn main() {
     println!("\nVariables and Mutability\n");
@@ -35,4 +26,7 @@ fn main() {
 
     println!("\nStructs\n");
     structure::main();
+
+    println!("\nEnums and Pattern\n");
+    enums_and_pattern::main();
 }
