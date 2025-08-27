@@ -1,6 +1,17 @@
 mod chapter;
 
-use crate::chapter::{variables_and_mutability, data_type, control_flow, functions, ownership, references_and_borrowing, slices, structure, enums_and_pattern};
+use crate::chapter::{
+    variables_and_mutability,
+    data_type,
+    control_flow,
+    functions,
+    ownership,
+    references_and_borrowing,
+    slices,
+    structure,
+    enums_and_pattern,
+    package_crates,
+};
 
 fn main() {
     println!("\nVariables and Mutability\n");
@@ -29,4 +40,11 @@ fn main() {
 
     println!("\nEnums and Pattern\n");
     enums_and_pattern::main();
+
+    println!("\nPackages and Crates\n");
+    println!("called hosting::add_to_waitlist{}", package_crates::main());
+    // let pc = package_crates::hosting::add_to_waitlist();
+    // println!("{}", pc)
+
+
 }
