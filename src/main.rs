@@ -9,8 +9,7 @@ use crate::chapter::{
     references_and_borrowing,
     slices,
     structure,
-    enums_and_pattern,
-    package_crates,
+    enums_and_pattern
 };
 
 fn main() {
@@ -41,10 +40,21 @@ fn main() {
     println!("\nEnums and Pattern\n");
     enums_and_pattern::main();
 
+    // inner use "use keyword"
+    use crate::chapter::package_crates;
     println!("\nPackages and Crates\n");
     println!("called hosting::add_to_waitlist{}", package_crates::main());
     // let pc = package_crates::hosting::add_to_waitlist();
     // println!("{}", pc)
 
+
+    use std::collections::HashMap;
+
+    let mut m = HashMap::new();
+    m.insert(1, 2);
+
+    println!("{:?}", m);
+    println!("{:?}", HashMap::from([(1, 2), (2, 1)]));
+    println!("{:?}", HashMap::try_from([(1, 2), (2, 1)]));
 
 }
