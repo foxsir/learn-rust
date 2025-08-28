@@ -9,7 +9,9 @@ use crate::chapter::{
     references_and_borrowing,
     slices,
     structure,
-    enums_and_pattern
+    enums_and_pattern,
+    collections::collection_of_vector as collections_main,
+    collections
 };
 
 fn main() {
@@ -47,14 +49,8 @@ fn main() {
     // let pc = package_crates::hosting::add_to_waitlist();
     // println!("{}", pc)
 
-
-    use std::collections::HashMap;
-
-    let mut m = HashMap::new();
-    m.insert(1, 2);
-
-    println!("{:?}", m);
-    println!("{:?}", HashMap::from([(1, 2), (2, 1)]));
-    println!("{:?}", HashMap::try_from([(1, 2), (2, 1)]));
-
+    println!("\nCommon Collections\n");
+    println!("use as keyword");
+    collections_main();
+    collections::collection_of_string();
 }
