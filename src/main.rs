@@ -52,5 +52,5 @@ fn main() {
     println!("\nCommon Collections\n");
     println!("use as keyword");
     collections_main();
-    collections::collection_of_string();
+    collections::string_of_collection();
 }

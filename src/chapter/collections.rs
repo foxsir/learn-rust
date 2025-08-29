@@ -1,3 +1,8 @@
+fn print_type<T>(_: &T) {
+    println!("Type name: {}", std::any::type_name::<T>());
+}
+
+
 pub fn vector_of_collection() {
     let mut v: Vec<i32> = Vec::new();
     v.insert(0, 1);
@@ -43,5 +48,33 @@ pub fn vector_of_collection() {
 }
 
 pub fn string_of_collection() {
+    let data = "initial contents";
+    println!("{:?}", data);
+    print_type(&data);
 
+    let s = data.to_string();
+    println!("{:?}", s);
+    print_type(&s);
+
+    let mut s1 = String::from("foo");
+    let s2 = "bar";
+    s1.push_str(s2);
+    println!("s2 is {s2}");
+
+    let s1 = String::from("Hello, ");
+    let s2 = String::from("world!");
+    let s3 = s1 + &s2; // note s1 has been moved here and can no longer be used
+    println!("{}", s3);
+    println!("{}", String::from("hello world"));
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+
+    let s = format!("{s1}-{s2}-{s3}");
+    println!("{}", s);
+
+    let s1 = String::from("你hi");
+    let h = &s1[0..3];
+    println!("{}", h);
 }
