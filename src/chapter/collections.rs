@@ -1,4 +1,4 @@
-pub fn collection_of_vector() {
+pub fn vector_of_collection() {
     let mut v: Vec<i32> = Vec::new();
     v.insert(0, 1);
     v.insert(1, 2);
@@ -42,6 +42,6 @@ pub fn collection_of_vector() {
     println!("{:?}", v);
 }
 
-pub fn collection_of_string() {
+pub fn string_of_collection() {
 
 }

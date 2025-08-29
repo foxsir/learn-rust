@@ -10,7 +10,7 @@ use crate::chapter::{
     slices,
     structure,
     enums_and_pattern,
-    collections::collection_of_vector as collections_main,
+    collections::vector_of_collection as collections_main,
     collections
 };
 
