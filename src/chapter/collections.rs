@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn print_type<T>(_: &T) {
     println!("Type name: {}", std::any::type_name::<T>());
 }
@@ -77,4 +79,41 @@ pub fn string_of_collection() {
     let s1 = String::from("你hi");
     let h = &s1[0..3];
     println!("{}", h);
+}
+
+pub fn hashmap_of_collection() {
+    let mut map = HashMap::from([(String::from("a"), 100), (String::from("b"), 200)]);
+
+    println!("{:?}", map.get(&String::from("a")).is_some());
+    println!("{:?}", map.get("c").unwrap_or(&100));
+
+
+    for (key, value) in &map {
+        println!("{key}: {value}");
+    }
+
+    map.insert(String::from("a"), 200);
+    println!("{:?}", map.get(&String::from("a")));
+
+    println!("{:?}", map.entry(String::from("b")));
+    let x = map.entry(String::from("b"));
+    x.insert_entry(300);
+    println!("{:?}", map.get(&String::from("b")));
+
+
+    println!("根据旧值更新值");
+    let text = "hello world wonderful world";
+
+    let mut map2 = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map2.entry(word).or_insert(0);
+        println!("{}", word);
+        *count += 1;
+    }
+    println!("{map2:?}");
+
+
+
+
 }

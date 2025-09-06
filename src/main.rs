@@ -53,4 +53,5 @@ fn main() {
     println!("use as keyword");
     collections_main();
     collections::string_of_collection();
+    collections::hashmap_of_collection();
 }
