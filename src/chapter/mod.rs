@@ -9,3 +9,4 @@ pub mod structure;
 pub mod enums_and_pattern;
 pub mod package_crates;
 pub mod collections;
+pub mod errors;

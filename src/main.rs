@@ -11,7 +11,8 @@ use crate::chapter::{
     structure,
     enums_and_pattern,
     collections::vector_of_collection as collections_main,
-    collections
+    collections,
+    errors
 };
 
 fn main() {
@@ -54,4 +55,8 @@ fn main() {
     collections_main();
     collections::string_of_collection();
     collections::hashmap_of_collection();
+
+    println!("\nErrors, Recoverable and Unrecoverable");
+    println!("=========================================\n");
+    errors::main();
 }
