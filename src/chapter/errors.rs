@@ -26,6 +26,25 @@ fn use_ask_symbol() -> Result<File, Box<dyn Error>> {
     Ok(greeting_file)
 }
 
+#[derive(Debug)]
+struct Guess {
+    value: u32,
+}
+
+impl Guess {
+    pub fn new(value: u32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {value}.");
+        }
+
+        Guess { value }
+    }
+
+    pub fn value(&self) -> u32 {
+        self.value
+    }
+}
+
 pub fn main() {
     // panic!("crash and burn");
     let greeting_file_result = File::open("./src/main.rs");
@@ -40,5 +59,11 @@ pub fn main() {
     println!("\nread file(main.rsx) result is: {}", if read_username_from_file("./src/main.rsx").is_ok() {"ok"} else {"failed"} );
 
     println!("{:?}", use_ask_symbol());
+
+
+    let g = Guess::new(10);
+    println!("{:?}", g);
+    // when number is 200, will cause panic;
+    // Guess::new(200);
 
 }
