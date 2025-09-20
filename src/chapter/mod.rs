@@ -10,3 +10,4 @@ pub mod enums_and_pattern;
 pub mod package_crates;
 pub mod collections;
 pub mod errors;
+pub mod generic_traits_lifetimes;
