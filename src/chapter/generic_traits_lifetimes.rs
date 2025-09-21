@@ -39,7 +39,7 @@ fn notify<T: Summary + Display>(item: &T) {
     println!("{}", item.summarize2());
 }
 
-// 使用where范型
+// 使用where描述范型
 fn some_function<T, U>(t: &T, u: &U) -> i32
 where
     T: Display + Clone,
