@@ -1,3 +1,5 @@
+use crate::chapter;
+
 fn largest<T: PartialOrd>(list: &[T]) -> &T {
     let mut largest = &list[0];
 
@@ -62,4 +64,6 @@ pub fn main() {
 
     println!("{}", integer.x);
     println!("{}", integer.y);
+
+    chapter::lifetime_syntax::main();
 }
