@@ -1,4 +1,5 @@
 mod chapter;
+mod tests;
 
 use crate::chapter::{variables_and_mutability, data_type, control_flow, functions, ownership, references_and_borrowing, slices, structure, enums_and_pattern, collections::vector_of_collection as collections_main, collections, errors, generic_traits_lifetimes};
 
