@@ -6,5 +6,10 @@ edition = "2024"
 [profile.release]
 panic = "abort"
 
+[workspace]
+resolver = "3"
+members = ["command-line"]
+
+
 [dependencies]
 rand = "0.9.2"
